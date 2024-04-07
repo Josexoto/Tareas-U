@@ -9,6 +9,10 @@ struct Pieza {
     char simbolo[20];
     int x,y;
 };
+struct Tablero{
+    int cantidad_piezas;
+    Pieza *piezas_tablero;
+};
 
 
 void lectura() {
@@ -21,6 +25,8 @@ void lectura() {
 
     int cantidad_de_piezas;
     archivo >> cantidad_de_piezas;
+    Tablero piezas[1];
+    piezas[1].cantidad_piezas = cantidad_de_piezas;
 
     const int max_torres = 2,max_peones = 8,max_alfiles = 2, max_caballos = 2, rey_sebastian = 1, rey_ton = 1, reina_sebastian = 1; 
     
